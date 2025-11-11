@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computers and Progress</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #141e30, #243b55);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 3px solid #4cc9f0;
+      animation: fadeIn 2s ease-in-out;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: #00d4ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      margin: 0 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 15px #00d4ff;}
+      
+
+    h1 {
+      font-size: 3em;
+      margin-top: 40px;
+      text-shadow: 0 0 20px #4cc9f0;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.2em;
+      color: #cfd8dc;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    a button {
+      margin-top: 30px;
+      background: transparent;
+      border: 2px solid #4cc9f0;
+      color: #4cc9f0;
+      padding: 12px 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #4cc9f0, inset 0 0 10px #4cc9f0;
+    }
+
+    a button:hover {
+      background: #4cc9f0;
+      color: black;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="ai.html">AI</a>
+    <a href="cars.html">Cars</a>
+    <a href="phones.html">Phones</a>
+    <a href="computers.html">Computers</a>
+  </nav>
+
+  <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1400&q=80" alt="Computer Image">
+  <h1>Computers</h1>
+  <p>Computers drive every innovation — powering AI, games, research, and creativity. Their evolution defines the pace of our future.</p>
+  <p>A computer is a machine that can store, process, and display information.
+    They help people do things like write documents, play games, design, or browse the internet.
+    The main parts are the CPU (brain), RAM (memory), storage (hard drive), and screen.
+    There are many types: desktops, laptops, tablets, and servers.</p>
+  <a href="index.html"><button>⬅ Back to Home</button></a>
+</body>
+</html>

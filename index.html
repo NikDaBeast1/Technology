@@ -1,154 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Technology in the World</title>
-<style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #0a0f1a, #111827, #1f2937);
-    color: white;
-    text-align: center;
-    margin: 0;
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology in the World</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #0a0f1a, #111827, #1f2937);
+      color: white;
+      text-align: center;
+      margin: 0;
+      overflow-x: hidden;
+      height: 100vh;
+    }
 
-  h1 {
-    font-size: 3.2em;
-    margin-top: 70px;
-    text-shadow: 0 0 15px #00e1ff;
-    animation: glow 2s ease-in-out infinite alternate;
-    position: relative;
-    z-index: 5;
-  }
+    h1 {
+      font-size: 3.2em;
+      margin-top: 70px;
+      text-shadow: 0 0 15px #00e1ff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
 
-  @keyframes glow {
-    from { text-shadow: 0 0 15px #00e1ff; }
-    to { text-shadow: 0 0 30px #00ffff; }
-  }
+    @keyframes glow {
+      from { text-shadow: 0 0 15px #00e1ff; }
+      to { text-shadow: 0 0 30px #00ffff; }
+    }
 
-  p {
-    color: #dcdcdc;
-    font-size: 1.1em;
-    max-width: 800px;
-    margin: 20px auto;
-    position: relative;
-    z-index: 5;
-  }
+    p {
+      color: #dcdcdc;
+      font-size: 1.1em;
+      max-width: 800px;
+      margin: 20px auto;
+    }
 
-  .button-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-top: 50px;
-    position: relative;
-    z-index: 5;
-  }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 50px;
+    }
 
-  a { text-decoration: none; }
+    a {
+      text-decoration: none;
+    }
 
-  .cool-button {
-    background: transparent;
-    color: white;
-    border: 2px solid #00e1ff;
-    padding: 15px 40px;
-    font-size: 1.1em;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 0 10px #00e1ff, inset 0 0 10px #00e1ff;
-    animation: pulse 2s infinite;
-  }
+    .cool-button {
+      background: transparent;
+      color: white;
+      border: 2px solid #00e1ff;
+      padding: 15px 40px;
+      font-size: 1.1em;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00e1ff, inset 0 0 10px #00e1ff;
+      animation: pulse 2s infinite;
+    }
 
-  @keyframes pulse {
-    0% { box-shadow: 0 0 10px #00e1ff; }
-    50% { box-shadow: 0 0 25px #00e1ff, inset 0 0 25px #00e1ff; }
-    100% { box-shadow: 0 0 10px #00e1ff; }
-  }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #00e1ff; }
+      50% { box-shadow: 0 0 25px #00e1ff, inset 0 0 25px #00e1ff; }
+      100% { box-shadow: 0 0 10px #00e1ff; }
+    }
 
-  .cool-button:hover {
-    background: #00e1ff;
-    color: #000;
-    transform: scale(1.1);
-  }
+    .cool-button:hover {
+      background: #00e1ff;
+      color: #000;
+      transform: scale(1.1);
+    }
 
-  .tech-img {
-    margin-top: 40px;
-    width: 70%;
-    max-width: 600px;
-    border-radius: 20px;
-    box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
-    animation: float 5s ease-in-out infinite;
-    position: relative;
-    z-index: 5;
-  }
+    .tech-img {
+      margin-top: 40px;
+      width: 70%;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+      animation: float 5s ease-in-out infinite;
+    }
 
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-  }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
 
-  footer {
-    margin-top: 60px;
-    padding: 20px;
-    color: #aaa;
-    font-size: 0.9em;
-    position: relative;
-    z-index: 5;
-  }
-
-  /* Floating tech pieces */
-  .tech-piece {
-    position: absolute;
-    width: 60px;
-    opacity: 0;
-    animation: moveAround 22s linear infinite, fadeInOut 22s ease-in-out infinite;
-  }
-
-  @keyframes moveAround {
-    0%   { transform: translate(0, 0) rotate(0deg); }
-    25%  { transform: translate(150px, -100px) rotate(120deg); }
-    50%  { transform: translate(-100px, -200px) rotate(240deg); }
-    75%  { transform: translate(120px, -350px) rotate(300deg); }
-    100% { transform: translate(0, -600px) rotate(360deg); }
-  }
-
-  @keyframes fadeInOut {
-    0%, 100% { opacity: 0; }
-    10%, 90% { opacity: 0.9; }
-    50% { opacity: 0.4; }
-  }
-
-  @media (max-width:600px) {
-    .tech-piece { width: 40px; }
-    h1 { font-size: 2.4em; }
-  }
-</style>
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Floating technology icons (over 15 unique types) -->
-  <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" class="tech-piece" style="left:5%; top:95%; animation-delay:0s;"> <!-- Phone -->
-  <img src="https://cdn-icons-png.flaticon.com/512/1040/1040230.png" class="tech-piece" style="left:12%; top:90%; animation-delay:2s;"> <!-- Laptop -->
-  <img src="https://cdn-icons-png.flaticon.com/512/1040/1040229.png" class="tech-piece" style="left:20%; top:96%; animation-delay:4s;"> <!-- Desktop -->
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712039.png" class="tech-piece" style="left:28%; top:100%; animation-delay:6s;"> <!-- CPU -->
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712105.png" class="tech-piece" style="left:36%; top:98%; animation-delay:8s;"> <!-- Robot -->
-  <img src="https://cdn-icons-png.flaticon.com/512/1040/1040218.png" class="tech-piece" style="left:45%; top:94%; animation-delay:10s;"> <!-- Tablet -->
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712032.png" class="tech-piece" style="left:52%; top:99%; animation-delay:12s;"> <!-- Car -->
-  <img src="https://cdn-icons-png.flaticon.com/512/1040/1040220.png" class="tech-piece" style="left:60%; top:97%; animation-delay:14s;"> <!-- Headphones -->
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712102.png" class="tech-piece" style="left:68%; top:93%; animation-delay:16s;"> <!-- Drone -->
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712054.png" class="tech-piece" style="left:75%; top:92%; animation-delay:18s;"> <!-- Satellite -->
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" class="tech-piece" style="left:82%; top:96%; animation-delay:20s;"> <!-- Chip -->
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712081.png" class="tech-piece" style="left:88%; top:99%; animation-delay:22s;"> <!-- VR headset -->
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712087.png" class="tech-piece" style="left:32%; top:91%; animation-delay:24s;"> <!-- AI brain -->
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712050.png" class="tech-piece" style="left:48%; top:100%; animation-delay:26s;"> <!-- Server -->
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712108.png" class="tech-piece" style="left:65%; top:95%; animation-delay:28s;"> <!-- Circuit -->
-  <img src="https://cdn-icons-png.flaticon.com/512/4712/4712110.png" class="tech-piece" style="left:80%; top:98%; animation-delay:30s;"> <!-- AI eye -->
-
   <h1>Technology in the World</h1>
   <p>Explore how innovation, automation, and intelligence are shaping the modern world. Choose a topic below to learn more!</p>
 
@@ -162,6 +107,5 @@
   <img class="tech-img" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Technology Image">
 
   <footer>© 2025 Technology World | Designed by You</footer>
-
 </body>
 </html>

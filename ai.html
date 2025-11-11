@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artificial Intelligence</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #0f0c29, #302b63, #24243e);
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 3px solid #00e6e6;
+      animation: fadeIn 2s ease-in-out;
+    }
+    nav {
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav a {
+      color: #00d4ff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+      margin: 0 20px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 15px #00d4ff;}
+
+    h1 {
+      font-size: 3em;
+      margin-top: 40px;
+      text-shadow: 0 0 20px #00e6e6;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.2em;
+      color: #ccc;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    a button {
+      margin-top: 30px;
+      background: transparent;
+      border: 2px solid #00e6e6;
+      color: #00e6e6;
+      padding: 12px 30px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #00e6e6, inset 0 0 10px #00e6e6;
+    }
+
+    a button:hover {
+      background: #00e6e6;
+      color: black;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="ai.html">AI</a>
+    <a href="cars.html">Cars</a>
+    <a href="phones.html">Phones</a>
+    <a href="computers.html">Computers</a>
+  </nav>
+  
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80" alt="AI Image">
+  <h1>Artificial Intelligence</h1>
+  <p>AI allows machines to think, learn, and adapt. From facial recognition to smart assistants, it's reshaping every corner of modern life.</p>
+  <p>AI means machines or computers that can think and learn like humans.
+    It helps computers solve problems, recognize pictures or voices, and make decisions.
+    Examples: Chatbots like chat gpt, self-driving cars, and voice assistants like Siri or Alexa.
+    AI learns from data — the more information it gets, the smarter it becomes.</p>
+  <a href="index.html"><button>⬅ Back to Home</button></a>
+</body>
+</html>
